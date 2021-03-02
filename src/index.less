@@ -1,0 +1,42 @@
+@import "~antd/dist/antd.less";
+
+.searchParams {
+  .ant-input-group-wrapper {
+    margin-top: 10%;
+    width: 60%;
+  }
+}
+.results {
+  padding-top: 2%;
+  padding-right: 2%;
+
+  .pagination {
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+  }
+}
+
+.MealThumbnail {
+  padding: 10px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    border-radius: 5%;
+    transition: transform 0.25s ease;
+  }
+  img:hover {
+    -webkit-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    transform: scale(1.025);
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+}

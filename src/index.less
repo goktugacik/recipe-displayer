@@ -1,9 +1,24 @@
 @import "~antd/dist/antd.less";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
+header,
+footer {
+  min-height: 10vh;
+}
+
+.content {
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  min-height: 80vh;
+}
 .searchParams {
   .ant-input-group-wrapper {
     margin-top: 10%;
     width: 60%;
+  }
+  .inputContainer {
+    #food-search {
+    }
   }
 }
 .results {
@@ -15,28 +30,69 @@
       font-size: 18px;
       font-weight: 600;
       margin-right: 20px;
+      font-family: Nunito, sans-serif;
     }
   }
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade {
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  animation: fadeIn ease 2s;
+}
 .MealThumbnail {
   padding: 10px;
   overflow: hidden;
-  img {
-    width: 100%;
+
+  .imgContainer {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
     border-radius: 5%;
-    transition: transform 0.25s ease;
-  }
-  img:hover {
-    -webkit-transform: scale(1.025);
-    -ms-transform: scale(1.025);
-    transform: scale(1.025);
+
+    .tags {
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      height: 30px;
+
+      .ant-badge {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      transition: transform 0.5s ease;
+    }
+    img:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.25;
-    font-weight: 600;
+    font-weight: 700;
+    color: #2c2d2f;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: Nunito, sans-serif;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
     margin-top: 10px;
   }
+}
+
+.inputBox {
 }

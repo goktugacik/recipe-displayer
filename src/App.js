@@ -7,8 +7,8 @@ const { Header, Footer, Content } = Layout;
 const App = () => (
   <div>
     <Layout>
-      <Header>Header</Header>
-      <Content>
+      <Header className="header">Header</Header>
+      <Content className="content">
         <SearchAndDisplay />{" "}
       </Content>
       <Footer>Footer</Footer>

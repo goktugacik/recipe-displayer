@@ -42,11 +42,13 @@ function CategoryDetail() {
           <Row className="pagination" align="center">
             {meals && meals.length > 0 ? (
               <p>
-                Found {meals.length} Recipes <Emoji symbol="🍱" label="bento" />
+                Found {meals.length} Recipes on {category.category} catetgory
+                <Emoji symbol="🍱" label="bento" />
               </p>
             ) : (
               <p>
-                No meal found <Emoji symbol="🍱" label="bento" />
+                No meal found on {category.category} catetgory
+                <Emoji symbol="🍱" label="bento" />
               </p>
             )}
 
@@ -61,6 +63,7 @@ function CategoryDetail() {
           <Row gutter={[32, 32]}>
             {meals.slice((page - 1) * 12, page * 12).map((meal, index) => (
               <Col
+                className="thumbnail-col"
                 key={index + meal.strMeal}
                 lg={6} //4
                 md={8} //3

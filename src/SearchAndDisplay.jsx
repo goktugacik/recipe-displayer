@@ -104,7 +104,7 @@ function SearchAndDisplay() {
   return (
     <div>
       <Row>
-        <Col className="searchParams" span={12} align="center">
+        <Col className="searchParams" md={12} sm={24} align="center">
           <div className="inputContainer">
             <InputBox
               id="food-search"
@@ -136,7 +136,7 @@ function SearchAndDisplay() {
             </div>
           </div>
         </Col>
-        <Col className="results" span={12}>
+        <Col className="results" md={12} sm={24}>
           <Row className="pagination" align="center">
             {init ? (
               <p>
@@ -159,6 +159,7 @@ function SearchAndDisplay() {
           <Row gutter={[16, 16]}>
             {meals.slice((page - 1) * 6, page * 6).map((meal, index) => (
               <Col
+                className="thumbnail-col"
                 key={index + meal.strMeal}
                 lg={8}
                 md={12}

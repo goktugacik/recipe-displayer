@@ -4,7 +4,7 @@ import { Row, Col, Badge } from "antd";
 import ReactPlayer from "react-player";
 import SingleIngredient from "./components/SingleIngredient";
 
-function RecipeDetail(props) {
+function RecipeDetail() {
   const id = useParams();
   const [mealDetail, setMealDetail] = useState({ meals: [] });
 

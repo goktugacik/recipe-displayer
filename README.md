@@ -1,5 +1,4 @@
-# The project is deployed to [Netfily] (https://thirsty-banach-0837c6.netlify.app/
-)
+# The project is deployed to [Netfily] (https://thirsty-banach-0837c6.netlify.app/)
 
 
 # This project was bootstrapped with [Create React App](https://facebook.github.io/create-react-app/) + [Ant Design](https://ant.design) ✨

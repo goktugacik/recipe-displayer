@@ -6,6 +6,17 @@ footer {
   min-height: 10vh;
 }
 
+.header {
+  background-color: #fff;
+  .logo {
+    height: 100%;
+  }
+}
+
+.none {
+  display: none;
+}
+
 .content {
   background-image: url(./assets/bg.jpg);
   background-size: cover;
@@ -16,8 +27,14 @@ footer {
     margin-top: 10%;
     width: 60%;
   }
-  .inputContainer {
-    #food-search {
+  .select-width {
+    width: 60%;
+    margin-top: 50px;
+    .ant-select {
+      width: 80%;
+    }
+    .ant-btn {
+      width: 20%;
     }
   }
 }
@@ -51,21 +68,47 @@ footer {
   padding: 10px;
   overflow: hidden;
 
+  .ant-ribbon {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+
+    &:hover {
+      background-color: royalblue;
+      text-decoration: underline;
+      transition: background-color 500ms linear;
+    }
+
+    .ant-ribbon-text {
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-badge-count {
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .imgContainer {
     text-align: center;
     position: relative;
     overflow: hidden;
     border-radius: 5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
     .tags {
       position: absolute;
       bottom: 3%;
       left: 5%;
       height: 30px;
+      display: flex;
+      flex-flow: row wrap-reverse;
 
       .ant-badge {
-        margin-right: 5px;
-        margin-left: 5px;
+        margin: 5px;
       }
     }
     img {
@@ -94,5 +137,79 @@ footer {
   }
 }
 
-.inputBox {
+.recipe-details {
+  padding: 1% 5%;
+  .recipe-header {
+    justify-content: space-evenly;
+    margin: 20px 5px;
+    .title h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .category-col > div,
+    .tags-col > div {
+      display: inline-flex;
+      margin: 0 5px;
+      font-size: 20px;
+      .ant-badge {
+        margin-left: 10px;
+        .ant-badge-count {
+          font-size: 18px;
+          height: 25px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  .photo-video {
+    .photo,
+    .video {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      width: 50%;
+    }
+  }
+  .ingredients-instructions {
+    font-family: Nunito, sans-serif;
+
+    .ingredients {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+      .ingredients-list {
+        display: inline-flex;
+        flex-direction: column;
+        .single-ingredient {
+          display: inline-flex;
+          span {
+            font-size: 20px;
+          }
+        }
+        .checked {
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .instructions {
+      margin-top: 20px;
+      p {
+        white-space: pre-line;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.catergory-detail {
+  padding: 10px 5%;
+
+  .MealThumbnail {
+    p {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -1,15 +1,25 @@
 import React from "react";
 import { Badge } from "antd";
+import { Link } from "react-router-dom";
 function MealThumbnail(props) {
   return (
     <div className="MealThumbnail fade">
-      <Badge.Ribbon text={props.meal.strCategory}>
+      <Badge.Ribbon
+        className={props.meal.strCategory ? "" : "none"}
+        text={
+          <Link to={`/category/${props.meal.strCategory}`}>
+            {props.meal.strCategory}
+          </Link>
+        }
+      >
         <div className="imgContainer">
-          <img
-            className="fade"
-            src={props.meal.strMealThumb}
-            alt={props.meal.strMealThumb}
-          />
+          <Link to={`/recipe/${props.meal.idMeal}`}>
+            <img
+              className="fade"
+              src={props.meal.strMealThumb}
+              alt={props.meal.strMealThumb}
+            />
+          </Link>
           <div className="tags">
             {props.meal.strTags != null || "" ? (
               props.meal.strTags
@@ -28,8 +38,9 @@ function MealThumbnail(props) {
           </div>
         </div>
       </Badge.Ribbon>
-
-      <p>{props.meal.strMeal}</p>
+      <Link to={`/recipe/${props.meal.idMeal}`}>
+        <p>{props.meal.strMeal}</p>
+      </Link>
     </div>
   );
 }
